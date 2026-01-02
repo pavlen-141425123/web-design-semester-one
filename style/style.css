@@ -1,0 +1,264 @@
+/* Общи стилове */
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #0d47a1;
+    --accent-color: #00e5ff;
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+}
+
+/* Хедър и Лого */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--accent-color);
+    position: sticky;
+}
+
+.logo-container {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Навигация */
+nav {
+    background: #222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    padding: 1rem 1.5rem;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: var(--secondary-color);
+    color: var(--accent-color);
+}
+
+/* Основно съдържание */
+main {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    background: white;
+    flex: 1;
+    margin: 0 auto;       /* Changed from 'auto' to '0 auto' to prevent vertical gaps */
+    min-height: auto;
+
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.info-column {
+    flex: 4; /* Takes up 40% space */
+}
+
+.slideshow-column {
+    flex: 6; /* Takes up 60% space */
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto; /* Keeps the aspect ratio so nothing is cut off */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+section {
+    margin-bottom: 2rem;
+    position: center;
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;   
+}
+
+.active {
+  background-color: #717171;
+}
+
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* Thumbnail Container */
+.thumbnail-row {
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 20px auto;
+  gap: 10px;
+}
+
+.thumb-column {
+  text-align: center;
+  flex: 1;
+}
+
+/* The small images */
+.thumb {
+  width:99%;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+/* Highlight for image and bold for text below it */
+.thumb.active {
+  opacity: 1;
+  border: 2px var(--accent-color);
+}
+
+.thumb.active + p {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Таблици */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Форми */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+input, textarea, button {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: var(--secondary-color);
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsive дизайн за мобилни устройства */
+@media (max-width: 768px) {
+    header { flex-direction: column; text-align: center; }
+    nav ul { flex-direction: column; }
+    nav a { text-align: center; border-bottom: 1px solid #444; }
+}

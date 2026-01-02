@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>КиберЗащита | Начало</title>
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="icon" href="/images/cyber-security.png" type="image/x-icon">
+    </head>
+    <body>
+        <div id="header-placeholder"></div>
+        <nav id="nav-placeholder"></nav>
+        <main>
+            <div class="content-wrapper">
+                <section class="info-column">
+                    <h2>Добре дошли в света на киберсигурността</h2>
+                    <p>В днешната дигитална ера защитата на личната информация е по-важна от всякога. Този сайт е създаден с цел да ви обучи как да се предпазвате от онлайн заплахи.</p> 
+                    
+                    <h3>Какво ще научите тук?</h3>
+                    <ul>
+                        <li>Какви са основните киберзаплахи.</li>
+                        <li>Как да създавате неразбиваеми пароли.</li>
+                        <li>Как да защитите личните си данни.</li>
+                        <li>Съвети за сигурно използване на интернет.</li>
+                    </ul>
+                </section>
+                <section class ="slideshow-column">
+                    <div class="slideshow-container">
+                        <a href="views/threats.html">
+                            <div class="mySlides">
+                                <img src="images/threats.png" style="width:100%">
+                                <div class="text">Заплахи</div>
+                            </div>
+                        </a>
+                        <a href="views/passwords.html">
+                            <div class="mySlides fade">
+                                <img src="images/passwords.png" style="width:100%">
+                                <div class="text">Пароли</div>
+                            </div>
+                        </a>
+                        <a href="views/data-protection.html">
+                            <div class="mySlides fade">
+                                <img src="images/data-protection.png" style="width:100%">
+                                <div class="text">Защита на данни</div>
+                            </div>
+                        </a>
+                        <a href="views/tips.html">
+                            <div class="mySlides fade">
+                                <img src="images/tips.png" style="width:100%">
+                                <div class="text">Съвети</div>
+                            </div>
+                        </a>
+                    </div>
+                    <br>
+                    <div style="text-align:center">
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                    </div>
+
+                    <div class="thumbnail-row">
+                        <div class="thumb-column">
+                            <img class="thumb" src="images/threats.png" onclick="currentSlide(0)">
+                            <p>Заплахи</p>
+                        </div>
+                        <div class="thumb-column">
+                            <img class="thumb" src="images/passwords.png" onclick="currentSlide(1)">
+                            <p>Пароли</p>
+                        </div>
+                        <div class="thumb-column">
+                            <img class="thumb" src="images/data-protection.png" onclick="currentSlide(2)">
+                            <p>Защита на данни</p>
+                        </div>
+                        <div class="thumb-column">
+                            <img class="thumb" src="images/tips.png" onclick="currentSlide(3)">
+                            <p>Съвети</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <a href="views/contact.html" class="contact-button">
+            <div id="footer-placeholder"></div>
+        </a>
+        <script src="script.js"></script>
+    </body>
+</html>

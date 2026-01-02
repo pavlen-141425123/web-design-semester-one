@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html lang="bg">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>КиберЗащита | Контакти</title>
+            <link rel="stylesheet" href="../style/style.css">
+            <link rel="icon" href="/images/cyber-security.png" type="image/x-icon">
+        </head>
+        <div id="header-placeholder"></div>
+        <nav id="nav-placeholder"></nav>
+            <main>
+                <h2>Свържете се с нас</h2>
+                <p>Имате въпроси? Изпратете ни съобщение чрез формата по-долу:</p>
+
+                <form id="contactForm">
+                    <label for="name">Име:</label>
+                    <input type="text" id="name" name="name" required placeholder="Вашето име...">
+
+                    <label for="email">Имейл:</label>
+                    <input type="email" id="email" name="email" required placeholder="Вашият имейл...">
+
+                    <label for="subject">Тема:</label>
+                    <select id="subject" name="subject" style="margin-bottom:1rem; padding:0.8rem;">
+                        <option value="consultation">Консултация</option>
+                        <option value="incident">Сигнал за инцидент</option>
+                        <option value="other">Друго</option>
+                    </select>
+
+                    <label for="message">Съобщение:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Изпрати запитването</button>
+                </form>
+
+                <div id="formResponse">
+
+                </div>
+            </main>
+            <a href="/views/contact.html" class="contact-button">
+                <div id="footer-placeholder"></div>
+            </a>
+            <script src="../script.js"></script>
+        </body>
+    </html>
