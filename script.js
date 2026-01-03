@@ -1,13 +1,15 @@
 function loadSharedComponents() {
+
+    const prefix = window.location.pathname.includes('/views/') ? '../' : '';
     // Зареждане на Header
-    fetch('/base/header.html')
+    fetch(prefix + '/base/header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
         });
 
     // Зареждане на Nav
-    fetch('/base/nav.html')
+    fetch(prefix + '/base/nav.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('nav-placeholder').innerHTML = data;
@@ -16,7 +18,7 @@ function loadSharedComponents() {
         });
 
     // Зареждане на Footer
-    fetch('/base/footer.html')
+    fetch(prefix + '/base/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
@@ -63,17 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         });
     }
-
-    // // Навигационно меню - маркиране на активната страница
-    // const currentPath = window.location.pathname.split("/").pop();
-    // const navLinks = document.querySelectorAll('nav ul li a');
-    
-    // navLinks.forEach(link => {
-    //     if (link.getAttribute('href') === currentPath) {
-    //         link.style.backgroundColor = '#00e5ff';
-    //         link.style.color = '#1a237e';
-    //     }
-    // });
 });
 
 
