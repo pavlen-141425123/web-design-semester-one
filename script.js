@@ -1,15 +1,15 @@
 function loadSharedComponents() {
+    const repoPath = '/web-design-semester-one/';
 
-    const prefix = window.location.pathname.includes('/views/') ? '../' : '';
     // Зареждане на Header
-    fetch(prefix + '/base/header.html')
+    fetch(repoPath + 'base/header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
         });
 
     // Зареждане на Nav
-    fetch(prefix + '/base/nav.html')
+    fetch(repoPath + 'base/nav.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('nav-placeholder').innerHTML = data;
@@ -18,7 +18,7 @@ function loadSharedComponents() {
         });
 
     // Зареждане на Footer
-    fetch(prefix + '/base/footer.html')
+    fetch(repoPath + 'base/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
